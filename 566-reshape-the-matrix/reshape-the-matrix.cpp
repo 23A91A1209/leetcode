@@ -15,14 +15,14 @@ public:
             return mat;
         }
         int k=0;
-        while(k<arr.size()){
+        // while(k<arr.size()){
             for(int i=0;i<r;i++){
                 for(int j=0;j<c;j++){
                     res[i][j]=arr[k];
                     k++;
                 }
             }
-        }
+        // }
         return res;
 
     }
