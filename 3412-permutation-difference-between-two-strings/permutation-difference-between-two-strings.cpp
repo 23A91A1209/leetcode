@@ -6,7 +6,7 @@ public:
             for(int j=0;j<t.size();j++){
                 if(s[i]==t[j]){
                    res+=abs(i-j);
-                //    break;
+                   break;
                 }
             }
         }
