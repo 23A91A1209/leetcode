@@ -6,11 +6,14 @@ public:
         for(int i=0;i<apple.size();i++){
             applessum+=apple[i];
         }
+        int tot=0;
         for(int i=0;i<capacity.size();i++){
-            applessum-=capacity[i];
-            if(applessum<=0){
+            tot+=capacity[i];
+            if(tot>=applessum){
+                
                 return i+1;
             }
+            
            
         }
         return -1;
