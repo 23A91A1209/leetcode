@@ -20,9 +20,10 @@ public:
             if(isvowel(s[l])){
                 c--;
             }
+            ans=max(ans,c);
             r++;
             l++;
-            ans=max(ans,c);
+            
         }
         return ans;
 
