@@ -1,7 +1,7 @@
 class Solution {
 public:
     int residuePrefixes(string s) {
-        int i=0,j=0,c=0;
+        int c=0;
         set<char>st;
         for(int j=0;j<s.size();j++){
            st.insert(s[j]);
