@@ -6,7 +6,7 @@ public:
         long long mod=1e9+7;
         long long  ans=0;
         while(l<=h){
-            long long mid=(l+h)/2;
+            long long mid=l+(h-l)/2;// 1+(3-1)/2   1+3/2
             long long dvda=mid/a;
              long long dvdb=mid/b;
              long long lcm=a*b/__gcd(a,b);
