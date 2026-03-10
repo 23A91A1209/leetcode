@@ -1,26 +1,18 @@
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
-        vector<int>arr;
-        for(int i=0;i<nums.size();i++){
-            arr.push_back(i+1);
-        }
-        nums.insert(nums.end(),arr.begin(),arr.end());
-        sort(nums.begin(),nums.end());
-        map<int,int>mp;
-        for(int i=0;i<nums.size();i++){
-            cout<<nums[i]<<" ";
-            mp[nums[i]]++;
-        }
-        vector<int>res(2,0);
-        for(auto k:mp){
-            if(k.second==3){
-               res[0]=k.first;
-            }
-            if(k.second==1){
-                res[1]=k.first;
-            }
-        }
-        return res;
+        int n=nums.size();
+       vector<int>res(2);
+       vector<int>freq(n+1,0);
+       for(int x:nums){
+         freq[x]++;
+       }
+
+       for(int i=0;i<=n;i++){
+        if(freq[i]==2) res[0]=i;
+        if(freq[i]==0) res[1]=i;
+
+       }
+       return res;
     }
 };
