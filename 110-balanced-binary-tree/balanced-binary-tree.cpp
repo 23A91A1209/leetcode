@@ -14,11 +14,11 @@ public:
     int check(TreeNode* root){
         if(root==nullptr) return 0;
         int left=check(root->left);
-        if(left==-1){
+        if(left<0){
              return -1;
         }
         int right=check(root->right);
-        if(right==-1){
+        if(right<0){
             return -1;
         }
         if(abs(left-right)>1) return -1;
